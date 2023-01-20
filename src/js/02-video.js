@@ -11,11 +11,4 @@ const onPlay = function (e) {
 player.on('play', throttle(onPlay, 1000));
 console.log(localStorage);
 
-player.setCurrentTime(localStorage.getItem('videoplayer-current-time')).catch(function (error) {
-  switch (error.name) {
-    case 'RangeError':
-      break;
-    default:
-      break;
-  }
-});
+player.setCurrentTime(localStorage.getItem('videoplayer-current-time'));
